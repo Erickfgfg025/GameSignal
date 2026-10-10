@@ -1,0 +1,28 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+secrets/
+credentials/
+*_secret*
+*_credentials*
+
+# Supabase local state
+supabase/.temp/
+.supabase/
+
+# Dependencies, caches, logs and local artifacts
+node_modules/
+.deno/
+coverage/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
