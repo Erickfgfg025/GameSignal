@@ -15,15 +15,16 @@ Data da exportação: 2026-10-10. Arquivos recuperados diretamente das versões 
 
 - Cada função tem sua própria cópia de `functions/_shared/`, tal como retornada no snapshot daquela função.
 - Arquivos compartilhados divergem entre versões implantadas. As cópias são separadas intencionalmente para evitar misturar implementações.
-- Este diretório é um **arquivo fiel de referência**, não uma raiz pronta para `supabase functions deploy`. Antes de usá-lo como fonte de build, é necessário reconciliar dependências compartilhadas, definir a estrutura canônica e executar testes.
+- Este diretório é um arquivo de referência, não uma raiz pronta para `supabase functions deploy`. Antes de usá-lo como fonte de build, é necessário reconciliar dependências compartilhadas, definir a estrutura canônica e executar testes.
 - A exportação não altera funções em produção e não inclui valores de secrets.
 - Todas as quatro funções estavam com `verify_jwt=false` no momento da consulta. Não mude esse comportamento sem analisar autenticação e chamadores.
 - Reconfirme versões antes de qualquer deploy futuro.
+- **Pendência de exportação:** a ferramenta do GitHub bloqueou a gravação de `cakto-webhook/functions/_shared/telegram.ts`. Esse arquivo não está presente neste snapshot e precisa ser recuperado por um método autorizado antes de considerar a cópia completa.
 
 ## Contagem
 
 - `telegram-webhook`: 10 arquivos
 - `check-prices`: 10 arquivos
 - `admin-api`: 4 arquivos
-- `cakto-webhook`: 6 arquivos
-- Total: 30 arquivos de código arquivados.
+- `cakto-webhook`: 5 de 6 arquivos
+- Total registrado no GitHub: 29 arquivos de código. Um arquivo permanece pendente.
